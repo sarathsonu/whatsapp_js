@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message to whataapp</title>
+
+    <style>
+        .main{
+            background-color: black;
+            color: white;
+            width: 60%;
+            height: 500px;
+            margin: auto;
+            padding: 40px;
+            text-align: center;
+        }
+        input::placeholder{
+            font-style: normal;
+            color: rgb(140, 138, 131);
+        }
+        input{
+            color: blue;
+            margin: 5px;
+            bottom: 1px solid gray;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            font-size: larger;
+
+        }
+        select{
+            font-size: larger;
+            color: blue;
+            margin: 5px;
+            bottom: 1px solid gray;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+        }
+        textarea{
+            font-size: larger;
+            color: blue;
+            margin: 5px;
+            bottom: 1px solid gray;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+        }
+        textarea::placeholder{
+            font-style: normal;
+            color:  rgb(140, 138, 131);
+            font-size: large;
+        }
+        #submit{
+        border: none;
+        background: #fff;
+        color: #000;
+        border-radius: 10px;
+        height: 60px;
+        width: 100px;
+        font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 40px; text-align: center;">Message whatsapp</h1>
+    <div class="main">
+    <form action="" method="post">
+        <input type="text" name="" id="name" placeholder="Name"><br>
+        <input type="text" name="" id="phone" placeholder="phone number"><br>
+        <input type="email" name="" id="email" placeholder="Email id"><br>
+        <select name="" id="course">
+            <option value="fswd"> full stack web development</option>
+            <option value="data science">Data science</option>
+            <option value="cloud">Cloud and devops</option>
+        </select><br>
+        <textarea name="" id="info" cols="30" rows="10" placeholder="Message"></textarea><br>
+        <input type="submit" id="submit" onclick="whataapp()" value="send">
+    </form>
+</div>
+    <script>
+        function whataapp() {
+            var name = document.getElementById("name").value;
+
+            var phone = document.getElementById("phone").value;
+        
+            var email = document.getElementById("email").value;
+        
+            var course = document.getElementById("course").value;
+        
+            var info = document.getElementById("info").value;
+
+            var whatsappurl="https://wa.me/918977940840?text="+
+            "Name :"+name+"%0a"+
+            "Phone :"+phone+"%0a"+
+            "Email :"+email+"%0a"+
+            "Course :"+course+"%0a"+
+            "Comment :"+info+"%0a";
+            window.open(whatsappurl,"_blank").focus()
+        }
+    </script>
+</body>
+</html>
